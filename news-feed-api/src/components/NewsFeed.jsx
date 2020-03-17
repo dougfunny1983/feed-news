@@ -9,6 +9,7 @@ import CountTimer from './CountTimer';
 
 export default function NewsFeed() {
   const { data, text, hidecomp, setHidecomp } = useContext(NewsFeedContext);
+  console.log(data);
 
   const replicante = (value) =>
     value.map((art) => {
@@ -48,7 +49,7 @@ export default function NewsFeed() {
           <CountTimer />
         </div>
       )}
-      <button onClick={handleClick}>Interromper Aplicação</button>
+      <button onClick={handleClick}>{hidecomp === true? 'Interromper Aplicação': 'Ativar a Aplicação'}</button>
       <div className="news-feed">
         {hidecomp && data && replicante(filterForName(data.articles, text))}
       </div>
