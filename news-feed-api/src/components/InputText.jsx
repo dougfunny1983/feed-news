@@ -9,6 +9,7 @@ export default function InputText() {
   return (
     <form className="input-container">
       <input
+        data-testid="input-text"
         onChange={handleInput}
         placeholder="Faça sua pesquisa aqui"
         type="text"
@@ -16,11 +17,11 @@ export default function InputText() {
       <label htmlFor="radio" onClick={handleRadio}>
         <span>
           headlines
-          <input type="radio" defaultChecked  name="radio" value="top-headlines?country=br"/>
+          <input type="radio" defaultChecked data-testid="radio-1" name="radio" value="top-headlines?country=br"/>
         </span>
         <span>
           everything
-          <input type="radio" name="radio" value="everything?q=coronavirus" />
+          <input type="radio" name="radio" data-testid="radio-2" value="everything?q=coronavirus" />
         </span>
       </label>
     </form>

@@ -9,8 +9,6 @@ import CountTimer from './CountTimer';
 
 export default function NewsFeed() {
   const { data, text, hidecomp, setHidecomp } = useContext(NewsFeedContext);
-  console.log(data);
-
   const replicante = (value) =>
     value.map((art) => {
       return (
