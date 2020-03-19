@@ -31,7 +31,7 @@ test('Testando o primeiro mock, headlines', async () => {
   expect(getByText(/everything/i)).toBeInTheDocument();
 
   await waitForDomChange();
-  // debug()
+  
   dataHeadlines.articles.forEach((art) => {
     expect(getByText(art.title)).toBeInTheDocument();
   });
@@ -47,7 +47,7 @@ test('Testando o everything', async () => {
   );
 
   await waitForDomChange();
-  // debug()
+  
   dataEverything.articles.forEach((art) => {
     expect(getByText(art.title)).toBeInTheDocument();
   });

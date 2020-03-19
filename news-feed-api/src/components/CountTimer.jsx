@@ -5,9 +5,7 @@ const CountTimer = () => {
   const { getNewsFeed, setData, radio } = useContext(NewsFeedContext);
 
   const now = new Date();
-  const dateNow = `proxima atualização → ${now.getHours()}:${now.getMinutes()}:${now.getSeconds(
-    10
-  )}`;
+  const dateNow = `proxima atualização → ${now.getHours()}:${now.getMinutes()}:${now.getSeconds(10)}`;
 
   useEffect(() => {
     setInterval(() => {
